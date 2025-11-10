@@ -1,0 +1,12 @@
+std_msgs/Header header
+float32 id
+float32 range_bin
+float32 breath_deviation
+float32 heart_rate_bpm
+float32 breathing_rate_rpm
+float32 heart_rate_confidence
+float32 breathing_rate_confidence
+float32 range_bin_max
+bool motion_detected
+float32[15] heart_waveform
+float32[15] breath_waveform

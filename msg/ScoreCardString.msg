@@ -1,0 +1,2 @@
+std_msgs/String scorecard
+sensor_msgs/CompressedImage image

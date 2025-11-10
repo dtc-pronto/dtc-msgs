@@ -1,0 +1,2 @@
+sensor_msgs/NavSatFix location
+builtin_interfaces/Time time_ago
