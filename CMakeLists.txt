@@ -21,6 +21,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Assessment.msg"
   "msg/NavSatFixArray.msg"
   "msg/NavSatFixTimeAgo.msg"
   "msg/RateTimeAgo.msg"
@@ -40,6 +41,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/CasualtyImage.msg"
   "msg/ReportAndImage.msg"
   "msg/TrackingState.msg"
+  "msg/Triage.msg"
   "msg/TriageReport.msg"
   "msg/VitalSigns.msg"
   DEPENDENCIES
