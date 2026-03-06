@@ -1,3 +1,6 @@
 std_msgs/Header header
-std_msgs/UInt64 casualty_id
+
+uint32 casualty_id
+
+dtc_msgs/NavSatFixTimeAgo location
 std_msgs/Float64 rate
