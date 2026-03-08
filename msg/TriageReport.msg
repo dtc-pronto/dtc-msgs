@@ -1,3 +1,7 @@
 # msg/TriageReport.msg
-int32 casualty_id
-string report
+string severe_hemorrhage
+string trauma_head
+string trauma_torso
+string trauma_lower_ext
+string trauma_upper_ext
+string alertness_ocular
