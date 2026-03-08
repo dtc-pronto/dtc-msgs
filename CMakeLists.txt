@@ -42,6 +42,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TrackingState.msg"
   "msg/TriageReport.msg"
   "msg/VitalSigns.msg"
+  "msg/Gate1.msg"
+  "msg/Gate2.msg"
+  "msg/Gate3.msg"
+  "msg/Gate4.msg"
   DEPENDENCIES
     std_msgs
     sensor_msgs
