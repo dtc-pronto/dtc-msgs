@@ -1,5 +1,4 @@
-std_msgs/Header header
-int id
+uint32 casualty_id
 string team
 string system
 float32 latitude
