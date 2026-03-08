@@ -5,3 +5,4 @@ string trauma_torso
 string trauma_lower_ext
 string trauma_upper_ext
 string alertness_ocular
+sensor_msgs/CompressedImage image
