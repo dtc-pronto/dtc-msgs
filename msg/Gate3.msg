@@ -1,0 +1,14 @@
+uint32 casualty_id
+string team
+string system
+uint32 trauma_head
+uint32 trauma_torso_back
+uint32 trauma_torso_front
+uint32 trauma_leg_right
+uint32 trauma_leg_left
+uint32 trauma_arm_right
+uint32 trauma_arm_left
+uint32 alertness_ocular
+uint32 alertness_verbal
+uint32 alertness_motor
+uint32 second_pass_category
