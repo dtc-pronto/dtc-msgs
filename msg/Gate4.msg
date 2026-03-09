@@ -1,5 +1,5 @@
 uint32 casualty_id
 string team
 string system
-uint32 rr
-uint32 hr
+float32 rr
+float32 hr
