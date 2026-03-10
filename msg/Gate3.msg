@@ -12,3 +12,4 @@ uint32 alertness_ocular
 uint32 alertness_verbal
 uint32 alertness_motor
 uint32 second_pass_category
+sensor_msgs/CompressedImage image
