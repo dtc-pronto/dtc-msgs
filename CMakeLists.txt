@@ -46,6 +46,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Gate2.msg"
   "msg/Gate3.msg"
   "msg/Gate4.msg"
+  "msg/FullReport.msg"
+  "msg/InitialReport.msg"
+  "msg/ServerReport.msg"
   DEPENDENCIES
     std_msgs
     sensor_msgs
