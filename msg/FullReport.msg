@@ -1,3 +1,3 @@
 uint32 casualty_id
-str report
+std_msgs/String report
 sensor_msgs/CompressedImage image
