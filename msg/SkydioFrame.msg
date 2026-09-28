@@ -1,0 +1,7 @@
+std_msgs/Header header
+sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix center
+sensor_msgs/NavSatFix upper_left
+sensor_msgs/NavSatFix upper_right
+sensor_msgs/NavSatFix lower_right
+sensor_msgs/NavSatFix lower_left
