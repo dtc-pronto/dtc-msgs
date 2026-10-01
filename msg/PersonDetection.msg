@@ -1,0 +1,5 @@
+std_msgs/Header header
+uint32 person_id
+sensor_msgs/NavSatFix location
+dtc_msgs/BoundingBox box
+sensor_msgs/CompressedImage image

@@ -50,6 +50,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/InitialReport.msg"
   "msg/ServerReport.msg"
   "msg/SkydioFrame.msg"
+  "msg/PersonDetection.msg"
   DEPENDENCIES
     std_msgs
     sensor_msgs
