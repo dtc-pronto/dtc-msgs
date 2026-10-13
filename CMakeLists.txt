@@ -17,6 +17,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(action_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 # Generate messages
@@ -51,11 +52,14 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ServerReport.msg"
   "msg/SkydioFrame.msg"
   "msg/PersonDetection.msg"
+  "msg/CapturedCasualty.msg"
+  "action/CaptureCasualty.action"
   DEPENDENCIES
     std_msgs
     sensor_msgs
     nav_msgs
     geometry_msgs
+    action_msgs
 )
 
 ament_package()

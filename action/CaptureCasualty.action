@@ -1,0 +1,38 @@
+# action/CaptureCasualty.action
+# Photograph the casualties near where the robot stands and hand the photos
+# to the VLM node. Served by spot-perception/arm (`ros2 run arm capture_server`)
+# on /arm/capture_casualty. The arm finds casualties itself with its own
+# sweep: there is no target hint.
+#
+# Base ownership contract:
+#   1. Before sending the goal the caller stops commanding the base (planner
+#      idle, no trajectory or /cmd_vel in flight).
+#   2. On accept the server calls /stop_motion and waits for the base to be
+#      still, then owns the base and the arm until the result: it walks,
+#      turns and backs off near the casualty (2 m human-proximity rule).
+#   3. On a result, or after a cancel, the base is stopped and the arm stowed;
+#      the caller may drive again.
+# One goal at a time: a goal sent while another runs is rejected.
+
+# Goal
+bool single           # true: the nearest casualty only; false: tour every casualty in view
+float32 deadline_s    # launch -> first photo budget, seconds; 0 = server default
+string mode           # "auto" (scene brightness decides), "day" or "night"; "" = auto
+bool wait_for_vlm     # wait for each casualty's VLM report before returning
+---
+# Result
+uint8 OUTCOME_CAPTURED = 0       # at least one casualty photographed
+uint8 OUTCOME_NOTHING_FOUND = 1  # ran to the end, no casualty found
+uint8 OUTCOME_FAILED = 2         # the capture program failed (see message)
+uint8 OUTCOME_CANCELED = 3       # cancelled; casualties holds what was captured before
+uint8 outcome
+string message
+string run_dir                   # capture folder on the robot
+dtc_msgs/CapturedCasualty[] casualties
+geometry_msgs/PoseStamped final_robot_pose   # body pose at the end (vision frame)
+---
+# Feedback
+string phase          # handoff | capturing | reporting
+uint32 found_count    # casualties reported found so far
+uint32 captured_count # casualties photographed so far
+string detail
