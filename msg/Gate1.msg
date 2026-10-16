@@ -4,3 +4,4 @@ string system
 float32 latitude
 float32 longitude
 sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix gps

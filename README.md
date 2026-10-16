@@ -14,6 +14,31 @@ d = ScoreCardParser.parse_to_dict(msg)
 
 ## Message Definitions
 
+### Gate1, Gate2, Gate3, Gate4, and HMT
+
+Each message includes a compressed image and a GPS fix:
+
+```text
+sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix gps
+```
+
+`gps.latitude` and `gps.longitude` are in degrees, and `gps.altitude` is in meters
+above the WGS 84 ellipsoid. Gate1 also retains its existing `latitude` and
+`longitude` fields; publishers should keep them consistent with `gps`.
+
+The new `HMT` message contains:
+
+```text
+uint32 casualty_id
+string team
+string system
+sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix gps
+```
+
+Rebuild this package and downstream ROS packages after updating these interfaces.
+
 ### ScoreCard
 This uses the exact layout of the scorecard from DARPA
 ```

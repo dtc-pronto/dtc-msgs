@@ -3,3 +3,4 @@ string team
 string system
 uint32 category
 sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix gps

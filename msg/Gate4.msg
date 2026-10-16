@@ -4,3 +4,4 @@ string system
 float32 rr
 float32 hr
 sensor_msgs/CompressedImage image
+sensor_msgs/NavSatFix gps
