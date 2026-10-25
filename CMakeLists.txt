@@ -17,6 +17,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(vision_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
@@ -53,6 +54,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ServerReport.msg"
   "msg/SkydioFrame.msg"
   "msg/PersonDetection.msg"
+  "msg/BoundingBoxGPS.msg"
+  "msg/BoundingBoxGPSArray.msg"
   "msg/CapturedCasualty.msg"
   "action/CaptureCasualty.action"
   DEPENDENCIES
@@ -60,6 +63,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     sensor_msgs
     nav_msgs
     geometry_msgs
+    vision_msgs
     action_msgs
 )
 

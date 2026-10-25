@@ -1,0 +1,9 @@
+std_msgs/Header header
+string id
+vision_msgs/BoundingBox2D bbox
+sensor_msgs/NavSatFix upper_left
+sensor_msgs/NavSatFix upper_right
+sensor_msgs/NavSatFix lower_right
+sensor_msgs/NavSatFix lower_left
+sensor_msgs/NavSatFix centroid
+string localization_error
